@@ -59,16 +59,55 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
   <script>
-  const a = document.querySelector('[data-key="65"]');
-  const s = document.querySelector('[data-key="83"]');
-  const d = document.querySelector('[data-key="68"]');
-  const f = document.querySelector('[data-key="70"]');
-  const g = document.querySelector('[data-key="71"]');
-  const h = document.querySelector('[data-key="72"]');
-  const j = document.querySelector('[data-key="74"]');
-  const k = document.querySelector('[data-key="75"]');
-  const l = document.querySelector('[data-key="76"]');
-  const key = docment.querySelectorAll('.key');
+  const a = document.querySelector('[src="sounds/clap.wav"]');
+  const s = document.querySelector('[src="sounds/hihat.wav"]');
+  const d = document.querySelector('[src="sounds/kick.wav"]');
+  const f = document.querySelector('[src="sounds/openhat.wav"]');
+  const g = document.querySelector('[src="sounds/boom.wav"]');
+  const h = document.querySelector('[src="sounds/ride.wav"]');
+  const j = document.querySelector('[src="sounds/snare.wav"]');
+  const k = document.querySelector('[src="sounds/tom.wav"]');
+  const l = document.querySelector('[src="sounds/tink.wav"]');
+  function playMusic(){
+  if(event.keyCode === 65){
+    a.currentTime = 0;
+    a.play();
+  }
+  if(event.keyCode === 83){
+    s.currentTime = 0;
+    s.play();
+  }
+  if(event.keyCode === 68){
+    d.currentTime = 0;
+    d.play();
+  }
+  if(event.keyCode === 70){
+    f.currentTime = 0;
+    f.play();
+  }
+  if(event.keyCode === 71){
+    g.currentTime = 0;
+    g.play();
+  }
+  if(event.keyCode === 72){
+    h.currentTime = 0;
+    h.play();
+  }
+  if(event.keyCode === 74){
+    j.currentTime = 0;
+    j.play();
+  }
+  if(event.keyCode === 75){
+    k.currentTime = 0;
+    k.play();
+  }
+  if(event.keyCode === 76){
+    l.currentTime = 0;
+    l.play();
+  }
+  };
+  const btn = document.querySelector("body");
+  btn.addEventListener("keydown", playMusic);
   </script>
 </body>
 </html>
