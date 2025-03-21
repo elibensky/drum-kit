@@ -68,46 +68,94 @@
   const j = document.querySelector('[src="sounds/snare.wav"]');
   const k = document.querySelector('[src="sounds/tom.wav"]');
   const l = document.querySelector('[src="sounds/tink.wav"]');
+  const aKey = document.querySelector('[data-key="65"]');
+  const sKey = document.querySelector('[data-key="83"]');
+  const dKey = document.querySelector('[data-key="68"]');
+  const fKey = document.querySelector('[data-key="70"]');
+  const gKey = document.querySelector('[data-key="71"]');
+  const hKey = document.querySelector('[data-key="72"]');
+  const jKey = document.querySelector('[data-key="74"]');
+  const kKey = document.querySelector('[data-key="75"]');
+  const lKey = document.querySelector('[data-key="76"]');
+  function stopMusic(){
+  if(event.keyCode === 65){
+    aKey.classList.remove("playing")
+  }
+  if(event.keyCode === 83){
+    sKey.classList.remove("playing")
+  }
+  if(event.keyCode === 68){
+    dKey.classList.remove("playing")
+  }
+  if(event.keyCode === 70){
+    fKey.classList.remove("playing")  
+  }
+  if(event.keyCode === 71){
+    gKey.classList.remove("playing") 
+  }
+  if(event.keyCode === 72){
+    hKey.classList.remove("playing") 
+  }
+  if(event.keyCode === 74){
+    jKey.classList.remove("playing") 
+  }
+  if(event.keyCode === 75){
+    kKey.classList.remove("playing") 
+  }
+  if(event.keyCode === 76){
+    lKey.classList.remove("playing") 
+  } 
+  };
   function playMusic(){
   if(event.keyCode === 65){
     a.currentTime = 0;
-    a.play();
+    a.play()
+    aKey.classList.add("playing")
   }
   if(event.keyCode === 83){
     s.currentTime = 0;
     s.play();
+    sKey.classList.add("playing")
   }
   if(event.keyCode === 68){
     d.currentTime = 0;
     d.play();
+    dKey.classList.add("playing")
   }
   if(event.keyCode === 70){
     f.currentTime = 0;
     f.play();
+    fKey.classList.add("playing")
   }
   if(event.keyCode === 71){
     g.currentTime = 0;
     g.play();
+    gKey.classList.add("playing")
   }
   if(event.keyCode === 72){
     h.currentTime = 0;
     h.play();
+    hKey.classList.add("playing")
   }
   if(event.keyCode === 74){
     j.currentTime = 0;
     j.play();
+    jKey.classList.add("playing")
   }
   if(event.keyCode === 75){
     k.currentTime = 0;
     k.play();
+    kKey.classList.add("playing")
   }
   if(event.keyCode === 76){
     l.currentTime = 0;
     l.play();
+    lKey.classList.add("playing")
   }
   };
   const btn = document.querySelector("body");
   btn.addEventListener("keydown", playMusic);
+  btn.addEventListener("keyup", stopMusic);
   </script>
 </body>
 </html>
